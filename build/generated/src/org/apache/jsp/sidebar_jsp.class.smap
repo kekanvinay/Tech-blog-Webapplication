@@ -1,0 +1,15 @@
+SMAP
+sidebar_jsp.java
+JSP
+*S JSP
+*F
++ 0 sidebar.jsp
+sidebar.jsp
+*L
+1,20:48
+21,6:69
+26,4:75
+30:79,8
+31,4:87
+34,29:91
+*E

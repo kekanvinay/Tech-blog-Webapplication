@@ -1,0 +1,64 @@
+:root {
+			/*      Theme colors        */
+			--text-pink: #9f01ea;/* pink*/
+                       --text-blue: #56d8e4; /*blue*/
+			--sky: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+			--white: #ffffff;
+		}
+		/* ---------------- Global Classes ---------------*/
+		a {
+			text-decoration: none;
+			color: var(--text-color);
+		}
+                
+                body{
+                    height: auto;
+                }
+                
+.main-container {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    background: var(--sky);
+}
+
+.page{
+   margin: 20px;
+ 
+}
+
+a{
+text-decoration: none;    
+}
+.pagination{
+     display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin-bottom:auto;
+}
+.pagination button{
+ background-color:#fff;
+ color: #000;
+ font-size: 25px;
+height:50px;
+width:50px;
+background: none;
+border-radius: 25px;
+}
+.pagination .pages{
+    background: #fff;
+    color: #000;
+}
+.card {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 50px 0px 50px 10px;
+  height: 850px;
+  
+  
+}
+
+

@@ -24,6 +24,8 @@ public class likeServlet extends HttpServlet {
 out.println(operation);
         out.println("uid="+uid);
         out.println("pid="+pid);*/
+            System.out.println(uid);
+            System.out.println(pid);
              likeDao l=new likeDao(Connection_provider.getConnection());
             if(operation.equals("like"))
             {
@@ -38,7 +40,7 @@ out.println(operation);
             }
                 }
     }
-
+ 
     
     }// </editor-fold>
 

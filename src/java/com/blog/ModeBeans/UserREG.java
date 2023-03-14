@@ -11,12 +11,13 @@ public class UserREG {
     private String about;
     private Date RDATE;
     private String profile;
+    private  int Role;
     public UserREG()
     {
         
     }
 
-    public UserREG(int id, String Name, String Email, String password, String gender, String about, Date RDATE) {
+    public UserREG(int id, String Name, String Email, String password, String gender, String about, Date RDATE,int Role) {
         this.id = id;
         this.Name = Name;
         this.Email = Email;
@@ -24,14 +25,16 @@ public class UserREG {
         this.gender = gender;
         this.about = about;
         this.RDATE = RDATE;
+        this.Role=Role;
     }
 
-    public UserREG(String Name, String Email, String password, String gender, String about) {
+    public UserREG(String Name, String Email, String password, String gender, String about,int Role) {
         this.Name = Name;
         this.Email = Email;
         this.password = password;
         this.gender = gender;
         this.about = about;
+        this.Role=Role;
         
     }
     public int getId() {
@@ -96,6 +99,20 @@ public class UserREG {
 
     public void setProfile(String profile) {
         this.profile = profile;
+    }
+
+    /**
+     * @return the Role
+     */
+    public int getRole() {
+        return Role;
+    }
+
+    /**
+     * @param Role the Role to set
+     */
+    public void setRole(int Role) {
+        this.Role = Role;
     }
     
 }

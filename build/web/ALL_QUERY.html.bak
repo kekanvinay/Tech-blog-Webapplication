@@ -1,0 +1,14 @@
+<!-- FOR  USER TABLE  QUERY
+create table techUser(id int(20) AUTO_INCREMENT PRIMARY KEY ,
+Name varchar(500),Email varchar(500),
+password varchar(500),gender varchar(20),
+about varchar(1000) DEFAULT 'HEY i am using techblog',
+RDate timestamp DEFAULT now());      
+
+
+//FOR CATGORES TABLE 
+
+> create table Post(pid int(12) AUTO INCREAMENT PRIMARY KEY NOT NULL,ptitle varchar(150) NOT NULL,pcontent longtext,pcode longtext,ppic varchar(100),Pdate timestamp DEFAULT now(),CATid INT 
+
+
+-->

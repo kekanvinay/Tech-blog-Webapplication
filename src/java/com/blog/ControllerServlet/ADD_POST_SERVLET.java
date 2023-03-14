@@ -53,14 +53,20 @@ catch(Exception e)
  {
      out.println(e);
  }*/
+ File tmpDir = new File("E:\\netbeans project\\blog\\web\\img\\"+part.getSubmittedFileName()+"");
+boolean exists = tmpDir.exists();
+ 
 post_dao p1=new post_dao(Connection_provider.getConnection());
         if(p1.saveDao(p))
         {
             out.println("DONE");
+            
           //  String path =request.getRealPath("img")+File.separator+"images"+File.separator+part.getSubmittedFileName();
             //String path =part.getSubmittedFileName();
             //out.println(path);  
             //uploading code
+            if(exists!=true)
+            {
             try{
             FileOutputStream fos=new FileOutputStream("E:\\netbeans project\\blog\\web\\img\\"+part.getSubmittedFileName()+"");
             InputStream fis=part.getInputStream();
@@ -75,8 +81,9 @@ post_dao p1=new post_dao(Connection_provider.getConnection());
                 out.println(e);
                 System.out.println(e);
             }
+            }
         }
-        else
+            else
         {
             out.println("error");
         }

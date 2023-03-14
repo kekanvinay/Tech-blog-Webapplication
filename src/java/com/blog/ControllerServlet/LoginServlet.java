@@ -1,11 +1,11 @@
 package com.blog.ControllerServlet;
 import com.blog.ModeBeans.UserREG;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Arrays;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,17 +17,13 @@ public class LoginServlet extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        boolean res=false;
+        
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
            String name=request.getParameter("username");
            String password=request.getParameter("password");
+           System.out.println("Name is"+name);
+           System.out.println("password is"+password);
            try
            {
                Connection con=Connection_provider.getConnection();
@@ -45,25 +41,21 @@ public class LoginServlet extends HttpServlet {
                     u.setAbout(rs.getString(6));
                     u.setRDATE(rs.getTimestamp("RDate"));
                     //u.setProfile(rs.getString(8));
+                    u.setRole(Integer.parseInt(rs.getString(9)));
                     HttpSession session=request.getSession();
                     session.setAttribute("un",u);
-                    response.sendRedirect("mainProfile.jsp");
+                   out.println(true);
                 }
                 else
                 {
-                    RequestDispatcher rd=request.getRequestDispatcher("login_page.jsp");
-                    response.getWriter().println("<h3 style='color:red'> 'invaild username and passworrd'</h3>");
-                    rd.include(request, response);
+                  out.println(false); 
                 }
-               
-              
            }
             catch(Exception e)
             {
-                out.println();
+                out.println(e);
             }
-            out.println("</body>");
-            out.println("</html>");
+           
         }
  }
 

@@ -37,7 +37,7 @@ public class Logout_Servlet extends HttpServlet {
             out.println("<body>");
            HttpSession session=request .getSession();
            session.removeAttribute("un");
-           response.sendRedirect("login_page.jsp");
+           response.sendRedirect("login-1.jsp");
             out.println("</body>");
             out.println("</html>");
         }

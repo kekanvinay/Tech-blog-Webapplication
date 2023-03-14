@@ -1,0 +1,89 @@
+:root {
+			/*      Theme colors        */
+			--text-pink: #9f01ea;/* pink*/
+                       --text-blue: #56d8e4; /*blue*/
+			--sky: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+			--white: #ffffff;
+		}
+		/* ---------------- Global Classes ---------------*/
+		a {
+			text-decoration: none;
+			color: var(--text-color);
+		}
+   
+                body{
+                    margin: 0px;
+                    padding: 0px;
+                }
+.top-bar{
+    width: 100%;
+    height: 80px; 
+   }
+
+ .logo{
+   position: absolute;
+   left: 20px;
+   top: 20px;
+}
+
+.logo img{
+  height: 40px;
+  width: 80px; 
+    cursor: pointer;
+}
+
+.menu-bar{
+    width: 60%;
+    float: left;
+    text-align: center;
+}
+.menu-bar ul li a{
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+    color: var(--white);
+    margin: 15px 20px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.active,.menu-bar ul li a:hover{
+    border-top: 2px solid var(--text-pink);
+}
+
+.search-box{
+    position: relative;
+    width: 20%;
+    float: right;
+    top: 10px;
+}
+
+.input-search{
+    margin: 11px auto;
+    display: inline-flex;
+    border-bottom: 1px solid var(--text-blue);
+}
+
+.input-search input{
+    float: right;
+    padding: 5px;
+    box-shadow: none;
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+.search-icon .fa{
+    color: var(--text-blue);
+}
+
+.top-bar button{
+   background: none;
+   border: none;
+   }
+   
+ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 3px;
+}
+

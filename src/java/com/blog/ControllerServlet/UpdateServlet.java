@@ -40,7 +40,8 @@ public class UpdateServlet extends HttpServlet {
             String password=request.getParameter("Password");
             String about=request.getParameter("about");
             String gender=request.getParameter("gender");
-            UserREG u=new UserREG(userid, name, Email, password, gender, about,Date.from(Instant.EPOCH));
+            int rol=Integer.parseInt(request.getParameter("role"));
+            UserREG u=new UserREG(userid, name, Email, password, gender, about,Date.from(Instant.EPOCH),rol);
           //  out.println(Date.from(Instant.EPOCH));
             userDao u1=new userDao();
             if(u1.isUpdateUser(u))

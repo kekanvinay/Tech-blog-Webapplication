@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Register_servlet extends HttpServlet {
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
         
       PrintWriter out = response.getWriter();
@@ -23,19 +23,20 @@ public class Register_servlet extends HttpServlet {
             out.println("<body>");
             String name=request.getParameter("username");
             String Email=request.getParameter("email");
-            String Password=request.getParameter("Password");
+            String Password=request.getParameter("password");
             String gender=request.getParameter("GENDER");
             String area=request.getParameter("about");
-            UserREG u=new UserREG(name,Email,Password,gender, area);
+            int rol =Integer.parseInt(request.getParameter("role"));
+            UserREG u=new UserREG(name,Email,Password,gender, area,rol);
              try
              {
              Connection con=Connection_provider.getConnection();
             Statement st=con.createStatement();
-            String q="insert into techUser(Name,Email,password,gender,about) values('"+u.getName()+"','"+u.getEmail()+"','"+u.getPassword()+"','"+u.getGender()+"','"+u.getAbout()+"')";
+            String q="insert into techUser(Name,Email,password,gender,about,Role) values('"+u.getName()+"','"+u.getEmail()+"','"+u.getPassword()+"','"+u.getGender()+"','"+u.getAbout()+"','"+u.getRole()+"')";
             int x=st.executeUpdate(q);
             if(x==1)
             {
-            response.sendRedirect("login_page.jsp");                
+            response.sendRedirect("login-1.jsp");                
             }
               }
              catch(Exception e)

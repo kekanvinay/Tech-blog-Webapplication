@@ -53,7 +53,15 @@ private  int userid;
         this.catID = catID;
         this.userid=userid;
     }
-
+ public post( int pid,String Ptitle, String pcontent, String pcode, String ppic, int catID) {
+        this.Ptitle = Ptitle;
+        this.pcontent = pcontent;
+        this.pcode = pcode;
+        this.ppic = ppic;
+       //this.pdate = pdate;
+        this.catID = catID;
+        this.pid=pid;
+    }
     public int getPid() {
         return pid;
     }

@@ -1,0 +1,143 @@
+:root {
+			/*      Theme colors        */
+			--text-pink: #9f01ea;/* pink*/
+                       --text-blue: #56d8e4; /*blue*/
+			--sky: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+			--white: #ffffff;
+		}
+		/* ---------------- Global Classes ---------------*/
+		a {
+			text-decoration: none;
+			color: var(--text-color);
+		}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: var(--sky) ;
+     box-sizing: border-box;
+}
+
+/* < !--form area start--> */
+
+.Register-form {
+    background: var(--white);
+    z-index: 1;
+    font-family: "Candara", sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 0 45px 30px 45px;
+    text-align: center;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+.Register-form .text {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.Register-form .icons i {
+    color: var(--text-blue);
+    font-size: 25px;
+    margin: 0 30px 15px 30px;
+    transition: 0.8s;
+    transition-property: color, transform;
+}
+
+.Register-form .icons i:hover {
+    color: var(--text-pink);
+    transform: scale(1.3);
+}
+
+.Register-form .input {
+    outline: 0;
+    background: none;
+    font-size: 15px;
+    color: #000;
+    text-align: center;
+    width: 265px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 2.5px solid #2E86DE;
+    border-radius: 25px;
+    transition: 0.5s;
+    transition-property: width;
+}
+
+.Register-form .input:hover {
+    width: 300px;
+}
+
+.Register-form .input:focus {
+    width: 300px;
+}
+
+.Register-form button {
+    outline: 0;
+    background: none;
+    color: #000;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 150px;
+    padding: 15px;
+    border: 2.5px solid var(--text-pink);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-property: background, transform;
+}
+
+.Register-form button:hover,
+.Register-form button:active,
+.Register-form button:focus {
+    background: var(--text-blue);
+    transform: scale(1.1);
+}
+
+.Register-form .form-control select {
+    outline: 0;
+    background: none;
+    font-size: 15px;
+    color: #000;
+    text-align: center;
+    width: 265px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 2.5px solid #2E86DE;
+    border-radius: 25px;
+    transition: 0.5s;
+    transition-property: width;
+}
+
+.Register-form .form-control select option {
+    background: #000;
+    color: #fff;
+}
+
+.remember-forgot {
+  font-size: .9em;
+  color: #000;
+  font-weight: 500;
+  position: relative;
+  margin: -15px 0 15px;
+  margin-bottom: 10px;
+}
+
+.remember-forgot label input {
+  accent-color: #000;
+  margin-right: 3px;
+}
+
